@@ -1,0 +1,25 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<unistd.h>
+#include<sys/types.h>
+
+main(){
+    int numero;
+    int pid;
+    int x;
+
+    do{
+        printf("\nInserire il numero di processi compreso tra 1 e 4: ");
+        scanf("%d",&numero);
+    }while((numero<1)||(numero>4));
+    printf("\nSono il padre (PID%d) e sto per generare i miei figli", getppid());
+    for(x=0; x<numero; x++){
+        pid=fork();
+        if(pid==0){
+            sleep(1);
+            printf("\nSono il figlio (PID%d), mio padre (PID%d)", getpid(), getppid());
+
+        }
+    }
+    printf("\n\n\n");
+}
