@@ -1,0 +1,10 @@
+/* Damiani Riccardo 4INB
+   Scrivere un programma in Java che stampi a video "Hello world". */
+
+package hello.world;
+
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello world");
+    }
+}
