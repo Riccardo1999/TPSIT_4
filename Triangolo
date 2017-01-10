@@ -1,0 +1,25 @@
+/* Damiani Riccardo 4INB 
+   Scrivere un programma in Java che prende in input tutti i lati
+   di un triangolo e poi calcola il perimetro e lo stampa a video. */
+
+package triangolo;
+
+import java.util.Scanner;
+
+public class Triangolo {
+    public static void main(String[] args) {
+        int lati[] = new int[3];
+        int somma;
+        int x;
+        
+        Scanner input = new Scanner(System.in);
+        for(x=0; x<3; x++){
+            do{
+                System.out.print("Inserire il " +(x+1)+ " lato del triangolo: ");
+                lati[x] = input.nextInt();
+            }while(lati[x]<1);
+        }
+        somma=lati[0]+lati[1]+lati[2];
+        System.out.println("\nPerimetro: " + somma);
+    }
+}
