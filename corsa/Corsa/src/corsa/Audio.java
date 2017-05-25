@@ -27,7 +27,7 @@ public class Audio /*extends Applet*/{
         music.loop();*/
         try {
             // Usa URL (invece di File) per leggere dal disco.
-            File fileSuono = new File("C:\\Documents and Settings\\studente.MAT15\\Documenti\\NetBeansProjects\\TPSIT_4\\corsa\\Corsa\\src\\corsa/audio.wma");
+            File fileSuono = new File("C:\\Documents and Settings\\studente.MAT15\\Documenti\\NetBeansProjects\\TPSIT_4\\corsa\\Corsa\\src\\corsa\\audio.wma");
             // Crea uno stream d'input audio dal file del suono.
             AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(fileSuono);
             // Ottieni il clip.
